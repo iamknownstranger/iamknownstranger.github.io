@@ -332,10 +332,10 @@ function onMouseDown(event) {
                     if (currentcolor == 0xacacac) {
                     if (planetViewed == 1 || planetViewed==2 || planetViewed==3) {
                         planetViewed = 4;
-                        info.innerHTML = '<span id="couleur">Raah</span> Startup <div>Smart Object Detection and Guidance for Visually Impaired<div> ';
+                        info.innerHTML = '<span id="couleur">Anuvadhaka</span> Project : <a target="_blank" href="https://github.com/iamknownstranger/Project-Anuvadhaka" style="font-size: 22px; color: white;">Github <a> ';
                          document.getElementById('couleur').style.color="#acacac";
-                        subtitle.innerHTML = "Since <span>October 2018</span> .";
-                        description.innerHTML = "We focus on the need a person has to be independent and full of self esteem irrespective of his/her disability. Thus, we aim at converting liability into an asset and a disability into an ability.";
+                        subtitle.innerHTML = "Since <span>November 2018</span> .";
+                        description.innerHTML = "Braking the <span>Communication Barriers</span> between Noramal people and The challenged through the detection of American Sign language using Mobiles";
 
                         TweenMax.from($('#content'), 0.5, {
                             css: {
