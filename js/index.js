@@ -24,11 +24,25 @@ $(window).on('load', function() {
         ease: Quad.easeInOut,
     });
    
-    TweenMax.to($('#border'), 0.4, {
+    TweenMax.to($('#border'), 0.5, {
         css: {
-            height: '350px',
+            height: '250px',
         },
-        delay: 0.4,
+        delay: 0.5,
+        ease: Quad.easeInOut,
+    });
+    TweenMax.from($('#border'), 0.2, {
+        css: {
+            height: '230px'
+        },
+        delay: 0.5,
+        ease: Quad.easeInOut,
+    });
+    TweenMax.from($('#border'), 0.5, {
+        css: {
+            height: '0px'
+        },
+        delay: 0.5,
         ease: Quad.easeInOut,
     });
      TweenMax.to($('.social'), 1, {
@@ -189,7 +203,7 @@ function init() {
     info = document.getElementById('contentTitle');
     subtitle = document.getElementById('subtitle');
     description = document.getElementById('description')
-    var univers = document.getElementById('univers');
+    var universe = document.getElementById('universe');
 }
 
 function onWindowResize() {
@@ -228,16 +242,23 @@ function onMouseDown(event) {
                             ease: Quad.easeInOut
                         });
 
+                        TweenMax.from($('#border'), 0.2, {
+                            css: {
+                                height: '250px'
+                            },
+                            delay: 0.5,
+                            ease: Quad.easeInOut,
+                        });
                         TweenMax.from($('#border'), 0.5, {
                             css: {
                                 height: '0px'
                             },
-                            delay: 1,
+                            delay: 0.5,
                             ease: Quad.easeInOut,
                         });                      
                         
                         info.innerHTML = "I'm Chandra Sekhar <span>Mullu</span>,";
-                        subtitle.innerHTML = "a <span>Developer</span><br/> I love building <span>things</span> that change <span>things</span>";
+                        subtitle.innerHTML = "a <span>Developer</span> and a <span>Data Scientist</span><br/> I love building <span>things</span> that change <span>things</span>";
                         description.innerHTML = "International Institute of Information Technology, Nuzvid Class of <span>2022</span><br/><a target='_blank' href='https://github.com/gkalyan04/gkalyan04.github.io/blob/master/final_resume.pdf'>Offline Resume</a><br/><br/><div>Click on the other planets to learn more ...<div>";
                     }
                     if (planetViewed == 2 || planetViewed==3 || planetViewed==4) {
@@ -250,7 +271,7 @@ function onMouseDown(event) {
                         });
                         TweenMax.to($('#border'), 0.2, {
                             css: {
-                                height: '200px'
+                                height: '250px'
                             },delay:1,
                             ease: Quad.easeInOut,
                         });
@@ -316,7 +337,7 @@ function onMouseDown(event) {
 
                         TweenMax.to($('#border'), 0.2, {
                             css: {
-                                height: '200px'
+                                height: '230px'
                             },delay:1,
                             ease: Quad.easeInOut,
                         });
@@ -335,7 +356,7 @@ function onMouseDown(event) {
                         info.innerHTML = '<span id="couleur">Anuvadhaka</span> Project : <a target="_blank" href="https://github.com/iamknownstranger/Project-Anuvadhaka" style="font-size: 22px; color: white;">Github <a> ';
                          document.getElementById('couleur').style.color="#acacac";
                         subtitle.innerHTML = "Since <span>November 2018</span> .";
-                        description.innerHTML = "Braking the <span>Communication Barriers</span> between Noramal people and The challenged through the detection of American Sign language using Mobiles";
+                        description.innerHTML = "Braking the <span>Communication Barriers</span> between Noramal people and The challenged through the detection of American Sign language using Mobiles<br/><br/><div>Click on the other planets to learn more ...<div>";
 
                         TweenMax.from($('#content'), 0.5, {
                             css: {
@@ -346,7 +367,7 @@ function onMouseDown(event) {
 
                         TweenMax.to($('#border'), 0.1, {
                             css: {
-                                height: '200px'
+                                height: '230px'
                             },delay:1,
                             ease: Quad.easeInOut,
                         });
