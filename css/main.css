@@ -1,3 +1,23 @@
+#loading {
+    top:45%;
+   width: 100%;
+   height: 100vh;
+   background-color: #fff;
+   z-index: 99;
+   text-align: center;
+   margin: 0 auto;
+    position: absolute;
+}
+
+#loading-image {
+
+z-index: 100;
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 7%;
+  text-align: center;
+}
 html {
     color: #222;
     font-size: 1em;
