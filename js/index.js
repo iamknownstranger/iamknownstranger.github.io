@@ -356,7 +356,7 @@ function onMouseDown(event) {
                         info.innerHTML = '<span id="couleur">Anuvadhaka</span> Project : <a target="_blank" href="https://github.com/iamknownstranger/Project-Anuvadhaka" style="font-size: 22px; color: white;">Github <a> ';
                          document.getElementById('couleur').style.color="#acacac";
                         subtitle.innerHTML = "Since <span>November 2018</span> .";
-                        description.innerHTML = "Braking the <span>Communication Barriers</span> between Noramal people and The challenged through the detection of American Sign language using Mobiles<br/><br/><div>Click on the other planets to learn more ...<div>";
+                        description.innerHTML = "Braking the <span>Communication Barriers</span> between Normal people and The challenged through the detection and translation of American Sign language<br/><br/><div>Click on the other planets to learn more ...<div>";
 
                         TweenMax.from($('#content'), 0.5, {
                             css: {
