@@ -259,7 +259,7 @@ function onMouseDown(event) {
                         
                         info.innerHTML = "I'm Chandra Sekhar <span>Mullu</span>,";
                         subtitle.innerHTML = "a <span>Developer</span> and a <span>Data Scientist</span><br/> I love building <span>things</span> that change <span>things</span>";
-                        description.innerHTML = "International Institute of Information Technology, Nuzvid Class of <span>2022</span><br/><a target='_blank' href='https://github.com/gkalyan04/gkalyan04.github.io/blob/master/final_resume.pdf'>Offline Resume</a><br/><br/><div>Click on the other planets to learn more ...<div>";
+                        description.innerHTML = "International Institute of Information Technology, Nuzvid Class of <span>2022</span><br/><a target='_blank' href='https://github.com/iamknownstranger/iamknownstranger.github.io/blob/master/resume.pdf'>Offline Resume</a><br/><br/><div>Click on the other planets to learn more ...<div>";
                     }
                     if (planetViewed == 2 || planetViewed==3 || planetViewed==4) {
                         planetViewed = 1;
