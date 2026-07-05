@@ -21,6 +21,7 @@ export default function Profile() {
             if (result.ok) {
               return result.json();
             }
+            throw result;
           })
           .then(response => {
             setProfileFunction(response.data.user);

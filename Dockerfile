@@ -7,17 +7,13 @@ FROM node:20.0-alpine
 WORKDIR /app
 
 # Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package.json ./
+# Copy the lockfile too so installs are reproducible
+COPY package.json package-lock.json ./
 
 RUN apk add --no-cache git
 
-# Install any needed packages
-RUN npm install
-
-# Audit fix npm packages
-RUN npm audit fix
+# Install pinned packages from the lockfile
+RUN npm ci
 
 # Bundle app source
 COPY . /app
