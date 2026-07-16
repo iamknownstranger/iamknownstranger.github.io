@@ -4,22 +4,12 @@ import BlogCard from "../../components/blogCard/BlogCard";
 import {blogSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import {extractTextContent} from "../../utils";
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
   const [mediumBlogs, setMediumBlogs] = useState([]);
   function setMediumBlogsFunction(array) {
     setMediumBlogs(array);
-  }
-  //Medium API returns blogs' content in HTML format. Below function extracts blogs' text content within paragraph tags
-  function extractTextContent(html) {
-    return typeof html === "string"
-      ? html
-          .split(/<\/p>/i)
-          .map(part => part.split(/<p[^>]*>/i).pop())
-          .filter(el => el.trim().length > 0)
-          .map(el => el.replace(/<\/?[^>]+(>|$)/g, "").trim())
-          .join(" ")
-      : NaN;
   }
   useEffect(() => {
     if (blogSection.displayMediumBlogs === "true") {
@@ -29,6 +19,7 @@ export default function Blogs() {
             if (result.ok) {
               return result.json();
             }
+            throw result;
           })
           .then(response => {
             setMediumBlogsFunction(response.items);
