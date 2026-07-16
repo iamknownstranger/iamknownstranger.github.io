@@ -127,6 +127,18 @@ export default function socialMedia() {
           <span></span>
         </a>
       ) : null}
+
+      {socialMediaLinks.hackerrank ? (
+        <a
+          href={socialMediaLinks.hackerrank}
+          className="icon-button hackerrank"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-hackerrank"></i>
+          <span></span>
+        </a>
+      ) : null}
     </div>
   );
 }
