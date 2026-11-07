@@ -1,26 +1,22 @@
 name: Check Format
 on:
   push:
+    branches: [master]
   pull_request:
-    branches:
-      - master
+    branches: [master]
+
+permissions:
+  contents: read
+
 jobs:
   check-format:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           persist-credentials: false
-
-      - uses: actions/setup-node@v3.8.1
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18.x
-
-      - name: Install 🔧 # Install dependencies
-        run: |
-          npm install
-
-      - name: Check Format
-        run: |
-          npm run check-format
+          node-version: 22
+      - name: Check active portfolio formatting
+        run: npx --yes prettier@2.8.8 --check index.html assets/portfolio.css assets/portfolio.js README.md .github/workflows/deploy.yml .github/workflows/prettier.yml
