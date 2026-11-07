@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://iamknownstranger.github.io/sitemap.xml
