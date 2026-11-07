@@ -19,6 +19,5 @@ jobs:
           persist-credentials: false
       - name: Check static site assets and internal links
         run: python3 scripts/validate_portfolio.py
-
 # GitHub Pages publishes master / (root), as configured in repository settings.
 # The previous React build to gh-pages targeted a different publishing branch.
